@@ -44,16 +44,16 @@ export function aufgabe01(args) {
 
 linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
-
-export function 02(args) {
+export function aufgabe02(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    const upperCase = currentElement.toUpperCase()
 
-    result.push(currentElement)
+    result.push(upperCase)
   }
   return result.join("")
 }
 
-linkupExerciseHandler('[data-click=aufgabe02]', aufgabe02)
+linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
