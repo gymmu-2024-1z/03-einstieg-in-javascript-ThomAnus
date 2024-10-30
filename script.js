@@ -57,3 +57,40 @@ export function aufgabe02(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      count = count + 1
+    } else if (currentElement === "E") {
+      count = count + 1
+    } else {
+    }
+  }
+
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+  let count = 1
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === " ") {
+      count = count + 1
+    }
+  }
+
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
