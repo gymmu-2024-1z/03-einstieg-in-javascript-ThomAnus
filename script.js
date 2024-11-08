@@ -136,3 +136,10 @@ export function aufgabe06(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  return input.includes("und") //falls "und" im text vorkommt, wird durch "return input "true" ausgegeben
+}
+
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
