@@ -114,3 +114,25 @@ export function aufgabe05(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (
+      (currentElement >= "!" && currentElement <= "/") ||
+      (currentElement >= ":" && currentElement <= "@") ||
+      (currentElement >= "[" && currentElement <= "`") ||
+      (currentElement >= "{" && currentElement <= "~")
+    ) {
+      count = count + 1
+    }
+  }
+
+  return count >= 1
+}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
