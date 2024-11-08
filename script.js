@@ -99,8 +99,8 @@ export function aufgabe05(args) {
   const input = args
   const result = []
   let count = 0
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+  {
+    for (let i = 0; i < input.length; i++) constcurrentElement = input[i]
 
     if (currentElement >= "a" && currentElement <= "z") {
       count = count + 0
@@ -143,3 +143,18 @@ export function aufgabe07(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if ((currentElement = "e")) {
+      currentElement = "3"
+    } else if ((currentElement = "E")) {
+      currentElement = "3"
+    }
+  }
+}
