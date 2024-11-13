@@ -151,10 +151,16 @@ export function aufgabe08(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    if ((currentElement = "e")) {
-      currentElement = "3"
-    } else if ((currentElement = "E")) {
-      currentElement = "3"
+    if (currentElement === "e") {
+      //wenn ein überprüfung dann === und nicht =
+      result.push("3")
+    } else if (currentElement === "E") {
+      result.push("3")
+    } else {
+      result.push(currentElement)
     }
   }
+  return result.join("")
 }
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
