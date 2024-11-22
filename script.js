@@ -164,3 +164,46 @@ export function aufgabe08(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (input.length > 6) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe10(args) {
+  const input = args.trim()
+  const hexRegex = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/
+  return hexRegex.test(input)
+}
+
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe11(args) {
+  const input = args
+  const result = []
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (count === 0) {
+      result.push(currentElement.charCodeAt(0))
+    }
+    count = count + 1
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
