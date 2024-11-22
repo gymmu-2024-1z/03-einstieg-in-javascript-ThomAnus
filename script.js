@@ -240,3 +240,25 @@ export function aufgabe13(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  let result = 0
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      count = count + 1
+      if (count === 3) {
+        result = i
+        break
+      }
+    }
+  }
+
+  return result === 0 ? -1 : result
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
