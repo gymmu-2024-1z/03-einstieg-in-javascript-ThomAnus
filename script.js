@@ -194,16 +194,7 @@ linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
 export function aufgabe11(args) {
   const input = args
-  const result = []
-  let count = 0
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (count === 0) {
-      result.push(currentElement.charCodeAt(0))
-    }
-    count = count + 1
-  }
-  return result.join("")
+  return input.charCodeAt(0)
 }
 
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
