@@ -279,3 +279,15 @@ export function aufgabe15(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {
+  const index = args.indexOf("$")
+  if (index === -1) {
+    return [args]
+  }
+  const firstPart = args.slice(0, index)
+  const secondPart = args.slice(index + 1)
+  return [firstPart, secondPart]
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
