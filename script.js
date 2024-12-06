@@ -291,3 +291,24 @@ export function aufgabe16(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe17(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === " ") {
+      //wenn ein überprüfung dann === und nicht =
+      result.push(",")
+    }
+
+    {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
