@@ -294,21 +294,65 @@ linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
 export function aufgabe17(args) {
   const input = args
-  const result = []
+  const totalList = []
+  const currentList = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
     if (currentElement === " ") {
-      //wenn ein überprüfung dann === und nicht =
-      result.push(",")
+      totalList.push(currentList.join(""))
+      currentList.length = 0
+    } else {
+      currentList.push(currentElement)
     }
+  }
+  totalList.push(currentList.join(""))
+  return totalList
+}
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
-    {
-      result.push(currentElement)
-    }
+export function aufgabe18(args) {
+  const input = args
+  const nameAndAge = aufgabe17(input)
+  const result = []
+
+  result.push("Sie heissen ")
+  result.push(nameAndAge[0])
+  result.push(" und sind ")
+  result.push(nameAndAge[1])
+  result.push(" Jahre alt")
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    result.push(currentElement)
+    result.push(currentElement)
   }
   return result.join("")
 }
 
-linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "." && nextElement === " ") {
+    } else {
+      return true
+    }
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
