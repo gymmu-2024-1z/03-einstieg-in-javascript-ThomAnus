@@ -49,7 +49,7 @@ export function aufgabe02(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const upperCase = currentElement.toUpperCase()
+    const upperCase = currentElement.toUpperCase() //wir nehmen das aktuelle Zeichen und machen es groß
 
     result.push(upperCase)
   }
@@ -68,7 +68,7 @@ export function aufgabe03(args) {
     if (currentElement === "e") {
       count = count + 1
     } else if (currentElement === "E") {
-      count = count + 1
+      count = count + 1 //wenn ein e ist dann +1
     } else {
     }
   }
@@ -126,7 +126,7 @@ export function aufgabe06(args) {
       (currentElement >= "!" && currentElement <= "/") ||
       (currentElement >= ":" && currentElement <= "@") ||
       (currentElement >= "[" && currentElement <= "`") ||
-      (currentElement >= "{" && currentElement <= "~")
+      (currentElement >= "{" && currentElement <= "~") // sonderzeichen werden gelistet
     ) {
       count = count + 1
     }
