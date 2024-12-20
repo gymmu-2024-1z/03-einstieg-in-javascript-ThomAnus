@@ -539,3 +539,25 @@ export function selectionSort(args) {
   return input
 }
 linkupExerciseHandler("[data-click=selectionSort]", selectionSort)
+
+export function bubbleSort(args) {
+  // Sicherstellen dass die Eingabe eine Liste ist
+  const text = args
+  const list = text.split("") // erstellt eine Kopie vom Eingabearrays
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      // Reihenfolge stimmt nicht, Elemente müssen getauscht werden
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 // Starte von vorne, wenn etwas vertauscht wurde
+    }
+  }
+  const result = list.join("") // Konvertiert die sortierte Liste in einen String
+
+  return result
+}
+
+linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
