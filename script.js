@@ -356,3 +356,15 @@ export function aufgabe20(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+  for (let i = input.length - 1; i >= 0; i--) {
+    //wir gehen von hinten nach vorne, indem wir mit dem -1 bei input.lenghth von hinten beginnen
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
