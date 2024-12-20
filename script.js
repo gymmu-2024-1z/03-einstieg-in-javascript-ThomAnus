@@ -463,3 +463,24 @@ export function aufgabe25(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
+export function eigeneaufgabe1(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "1") {
+      result.push("e")
+      result.push("i")
+      result.push("n")
+      result.push("s")
+      //wenn ein 1 gefunden wurde, werden die Zeichen e, i, n und s nacheinander in dieser reihenfolgehinzugefügt, weil man es nich mit ein wort ersetzen kann
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneaufgabe1]", eigeneaufgabe1)
