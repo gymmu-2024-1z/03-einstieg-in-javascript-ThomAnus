@@ -443,3 +443,23 @@ export function aufgabe24(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe25(args) {
+  const input = args
+  const result = []
+  const half = Math.floor(input.length / 2) //die Eingabe wird halbiert
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (input.length % 2 === 0 && (i === half || i === half - 1)) {
+      //falls die Länge der Eingabe gerade ist, werden die beiden mittleren Zeichen gelöscht
+    } else if (input.length % 2 !== 0 && i === half) {
+      //falls die Länge der Eingabe ungerade ist, wird das mittlere Zeichen gelöscht
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
