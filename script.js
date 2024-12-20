@@ -484,3 +484,30 @@ export function eigeneaufgabe1(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=eigeneaufgabe1]", eigeneaufgabe1)
+
+export function eigeneaufgabe2(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (
+      currentElement.charCodeAt(0) >= 97 &&
+      currentElement.charCodeAt(0) <= 122
+    ) {
+      //wenn ein kleiner Buchstabe ist, wird vor ihm "average" hinzugefügt
+
+      result.push("A")
+      result.push("V")
+      result.push("E")
+      result.push("R")
+      result.push("A")
+      result.push("G")
+      result.push("E")
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneaufgabe2]", eigeneaufgabe2)
