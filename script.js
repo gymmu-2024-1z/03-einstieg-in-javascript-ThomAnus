@@ -400,3 +400,46 @@ export function aufgabe22(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  const result = []
+
+  if (input.length > 0) {
+    const firstElement = input[0]
+    result.push(firstElement + firstElement) //das erste Zeichen wird verdoppelt
+
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      result.push(currentElement)
+    }
+    result.push(firstElement) // das erste Zeichen wird wieder hinzugefügen
+  }
+  return result.join("")
+  //füge das Zeichen am ende hinzu
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
+
+export function aufgabe24(args) {
+  const input = args
+  if (input.length <= 1) {
+    return input
+    //falls die eingabe nur ein zeichen hat, bleibt es unverändert
+  }
+  const result = []
+
+  const firstElement = input[0]
+  const lastElement = input[input.length - 1] //das letzte Zeichen wird gespeichert und wir zählen von -1 ab
+
+  result.push(lastElement) //das letzte Zeichen wird hinzugefügt
+
+  for (let i = 1; i < input.length - 1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  result.push(firstElement)
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
