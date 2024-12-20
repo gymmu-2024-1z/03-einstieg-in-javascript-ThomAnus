@@ -561,3 +561,28 @@ export function bubbleSort(args) {
 }
 
 linkupExerciseHandler("[data-click=BubbleSort]", bubbleSort)
+
+export function countingSort(args) {
+  const input = args
+  const lookup = new Array(128).fill(0) // Erstellt ein Array mit 128 Elementen, um zu zählen wie oft ein Zeichen vorkommt (Lookup-Array)
+
+  for (let i = 0; i < input.length; i++) {
+    //geht durch alle Zeichen der Eingabe
+    const currentElement = input[i] // das aktuelle Zeichen (also das current Element) wird verwendet
+    const ascii = currentElement.charCodeAt(0) //wir nehmen dessen ASCII-Wert
+    lookup[ascii] = lookup[ascii] + 1 //ergänzen dessen ASCII-Wert um 1
+  }
+
+  const result = [] //Neues Array, um die bereits sortierten Zahlen zu speichern.
+
+  for (let i = 0; i < lookup.length; i++) {
+    //schaut die Häufigkeit der ASCII-Wertes nach, um so zu sortieren
+    const value = lookup[i] //holt den ASCII-Wert des Zeichens
+    for (let j = 0; j < value; j++) {
+      const character = String.fromCharCode(i) //der ASCII-Wert wird zurück in ein Zeichen umgewandelt
+      result.push(character)
+    }
+  }
+  return result.join("") //gibt den sortierten Array als String aus
+}
+linkupExerciseHandler("[data-click=CountingSort]", countingSort)
