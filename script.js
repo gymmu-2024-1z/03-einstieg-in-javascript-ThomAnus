@@ -511,3 +511,31 @@ export function eigeneaufgabe2(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=eigeneaufgabe2]", eigeneaufgabe2)
+
+export function selectionSort(args) {
+  // Erstelle eine Kopie des Eingabearrays, um das Original zu bewahren
+  const input = [...args]
+
+  //Jedes Element in der Eingabe wird durchgegangen, ausser das Letzte (deshab das -1), da dieses am Schluss automatisch sortiert wird
+  for (let i = 0; i < input.length - 1; i++) {
+    //wir nehmen an, dass das aktuelle Element das kleinste ist
+    let minIndex = i
+
+    //hier wird das aktuelle (wie wir annhemen, kleinste) Element mit allen folgenden Elementen verglichen
+    for (let j = i + 1; j < input.length; j++) {
+      // Wenn dA kleineres Element gefunden wird, aktualisiere minIndex
+      if (input[j] < input[minIndex]) {
+        minIndex = j // minIndex zeigt nun auf das kleinere Element
+      }
+    }
+
+    // Das Element an der Position i mit dem kleineren Element, das an minIndex gefunden wurde
+    const temp = input[i] // Speichere das aktuelle Element in einer temporären Variablen
+    input[i] = input[minIndex] // Setze das kleinere Element an die Position i
+    input[minIndex] = temp // Setze das Element an der Position minIndex an die ursprüngliche Position von i
+  }
+
+  // Gib das sortierte Array zurück
+  return input
+}
+linkupExerciseHandler("[data-click=selectionSort]", selectionSort)
