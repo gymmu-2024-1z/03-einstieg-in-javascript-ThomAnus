@@ -368,3 +368,35 @@ export function aufgabe21(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+  let foundk = false //wir prüfen, ob k bereits gefunden wurde
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if (foundk) {
+      //falls k gefunden wurde, bleiben die Zeichen unverändert
+      result.push(currentElement)
+    } else if (ascii >= 32 && ascii <= 94) {
+      //wir geben den ASCII-Wert von allen zahlen und sonderzeichen ausser "_", um es zu erkennen
+
+      result.push("_")
+    } else if (ascii >= 96 && ascii <= 106) {
+      // wir geben den ASCII-Wert von einem Sonderzeichen und den Kleinbuchstaben  a bis j ein, um diese zu erkennen
+      result.push("_")
+    } else if (ascii >= 108 && ascii <= 126) {
+      // wir geben den ASCII-Wert von den Kleinbuchstaben l bis z und Sonderzeichen ein, um diese zu erkennen
+      result.push("_")
+    } else if (ascii === 107) {
+      // wir geben den ASCII-Wert von "k" ein, um diese zu erkennen
+      result.push("k")
+      foundk = true
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
